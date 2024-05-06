@@ -52,14 +52,6 @@ function starFire() {
 
 function onReady() {
   console.log("Ready to go!");
-
-  // Make sure you check the index.html file!
-  // There are lots of buttons and things ready for you to hook into here!
-
-  // 🧠 Remember
-  // - Handle events that ->
-  // - Updates state which is ->
-  // - Rendered to the DOM
 }
 
 function shroomRegenerate() {
