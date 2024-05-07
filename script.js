@@ -90,12 +90,12 @@ function startShroomRegen() {
 }
 function gameResult() {
   if (fungusHP <= 0) {
-    fungusHP === 0;
+    fungusHP = 0;
     disableAttacks();
     fungusAnimation.classList.remove("walk");
     fungusAnimation.classList.add("dead");
   } else if (userAP <= 0) {
-    userAP === 0;
+    userAP = 0;
     disableAttacks();
     fungusAnimation.classList.remove("walk");
     fungusAnimation.classList.add("jump");
