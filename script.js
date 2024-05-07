@@ -17,13 +17,21 @@ function disableAttacks() {
 }
 
 function arcaneScepter() {
+  // if (abilityProgress.value < 12) {
+  //     alert("you do not have enough AP!");
+  //     return userAP;
+  //   }
   fungusHP -= 14;
   userAP -= 12;
+
   fungusProgress.value -= 14;
   abilityProgress.value -= 12;
-  console.log(fungusAnimation);
+
+  if (userAP <= 0) {
+    userAP = 0;
+    abilityProgress = 0;
+  }
   renderGame();
-  console.log(fungusHP);
 }
 
 function entangle() {
@@ -31,6 +39,10 @@ function entangle() {
   userAP -= 23;
   fungusProgress.value -= 9;
   abilityProgress.value -= 23;
+  if (userAP <= 0) {
+    userAP = 0;
+    abilityProgress = 0;
+  }
   renderGame();
 }
 
@@ -39,6 +51,10 @@ function dragonBlade() {
   userAP -= 28;
   fungusProgress.value -= 47;
   abilityProgress.value -= 28;
+  if (userAP <= 0) {
+    userAP = 0;
+    abilityProgress = 0;
+  }
   renderGame();
 }
 
@@ -47,6 +63,10 @@ function starFire() {
   userAP -= 33;
   fungusProgress.value -= 25;
   abilityProgress.value -= 33;
+  if (userAP <= 0) {
+    userAP = 0;
+    abilityProgress = 0;
+  }
   renderGame();
 }
 
@@ -75,7 +95,7 @@ function gameResult() {
     fungusAnimation.classList.remove("walk");
     fungusAnimation.classList.add("dead");
   } else if (userAP <= 0) {
-    userAP = 0;
+    userAP === 0;
     disableAttacks();
     fungusAnimation.classList.remove("walk");
     fungusAnimation.classList.add("jump");
